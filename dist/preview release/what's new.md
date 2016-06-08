@@ -56,7 +56,7 @@
     - SSAORenderingPipeline now uses bilateral blur post-processes instead of standard blur post-process, in order to remove more efficiently the "textile effect"
     - `Engine.updateDynamicVertexBuffer` now has optional count as well as offset to allow partial updates ([benaadams](https://github.com/benaadams)) 
     - vertex attributes are only disabled if they aren't going to be reeabled by the next draw, to reduce gpu state changes ([benaadams](https://github.com/benaadams)) 
-    - New `DynamicTexture` contructor option `forceExponentOfTwo` (default: `true`)  ([dahlbyk](https://github.com/dahlbyk))
+    - New `DynamicTexture` contructor option `forceExponentOfTwo` (default: `false`)  ([dahlbyk](https://github.com/dahlbyk))
   - **Exporters**
     - Unity3D exporter: Added support for lightmaps ([davrous](https://github.com/davrous), [deltakosh](https://github.com/deltakosh))
     - Unity3D exporter: Added support for export and run (local webserver) ([davrous](https://github.com/davrous), [deltakosh](https://github.com/deltakosh))
@@ -83,3 +83,4 @@
     - `Engine.bindMultiBuffers` is now `Engine.bindBuffers` and strongly typed `{ [key: string]: VertexBuffer; }` of buffers ([benaadams](https://github.com/benaadams))
     - `Engine.createDynamicVertexBuffer` takes vertices rather than capacity, creating and initalizing in one gpu instruction ([benaadams](https://github.com/benaadams)) 
     - Internally new `Engine.bindBuffer` is used rather than `gl.bindBuffer` which only binds when the bound buffer is changing ([benaadams](https://github.com/benaadams)) 
+    - `DynamicTexture` no longer forces height/width to exponents of two by default  ([dahlbyk](https://github.com/dahlbyk))
