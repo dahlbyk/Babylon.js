@@ -21,7 +21,7 @@ var BABYLON;
             else {
                 this._canvas = document.createElement("canvas");
                 if (options.width) {
-                    this._texture = scene.getEngine().createDynamicTexture(options.width, options.height, generateMipMaps, samplingMode);
+                    this._texture = scene.getEngine().createDynamicTexture(options.width, options.height, generateMipMaps, samplingMode, options.forceExponentOfTwo);
                 }
                 else {
                     this._texture = scene.getEngine().createDynamicTexture(options, options, generateMipMaps, samplingMode);
